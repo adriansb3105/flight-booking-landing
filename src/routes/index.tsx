@@ -1,9 +1,17 @@
 import { RouteObject } from "react-router"
+import Layout from "../layout"
+import Home from "../pages/Home"
 
 const routes:RouteObject[] = [
     {
-
+        path: "/",
+        element: <Layout />,
+        children: [
+            {
+                children: [{ path: "", element: <Home /> }]
+            }
+        ]
     }
 ]
 
-//4:15min   https://www.youtube.com/watch?v=-3iVVFaiD88&list=WL&index=69
+export default routes
